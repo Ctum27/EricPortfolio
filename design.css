@@ -2,7 +2,7 @@
 
 .columns {
   display: grid;
-  grid-template-columns: 280px 1fr; /* Izquierda fija 280px, derecha el resto */
+  grid-template-columns: 280px 1fr; 
   gap: 50px; 
   max-width: 1400px;
   margin: 0 auto;
@@ -11,26 +11,26 @@
 /* COLUMNA IZQUIERDA */
 
 .left-column ul {
-  list-style: none;  /* Quita las viñetas */
-  padding: 0;         /* Quita el padding por defecto */
-  margin: 0;          /* Quita el margen por defecto */
-  width: 100%;        /* Ocupa todo el ancho disponible */
+  list-style: none;  
+  padding: 0;         
+  margin: 0;          
+  width: 100%;        
 }
 
 .left-column li {
-  margin: 0;          /* Quita márgenes individuales */
+  margin: 0;       
 }
 
 .left-column a {
-  display: block;     /* Hace que el enlace ocupe todo el ancho del <li> */
-  padding: 0.5rem 2rem; /* Espaciado interno: vertical 0.5rem, horizontal 2rem */
-  color: rgba(255, 252, 252, 0.801); /* Texto blanco con 60% de opacidad */
-  text-decoration: none; /* Quita el subrayado */
-  font-weight: 600;   /* Un poco de negrita */
+  display: block;  
+  padding: 0.5rem 2rem; 
+  color: rgba(255, 252, 252, 0.801); 
+  text-decoration: none; 
+  font-weight: 600;   
   text-transform: uppercase; 
-  font-size: 1rem;  /* Tamaño de letra más pequeño */
-  letter-spacing: 8px; /* Espaciado entre letras */
-  transition: all 0.3s ease; /* Suaviza los cambios de color */
+  font-size: 1rem;  
+  letter-spacing: 8px; 
+  transition: all 0.3s ease; 
 }
 
 .left-column a:hover {
@@ -39,28 +39,28 @@
 }
 
 .left-column {
-  background-color: black; /* El fondo de la coulmna*/
+  background-color: black; 
   color: white;
-  padding: 5rem 0;  /* Espaciado superior e inferior */
-  position: sticky; /* Se queda fija al hacer scroll */
+  padding: 5rem 0;  
+  position: sticky; 
   top: 0;
-  height: 100vh;    /* Altura igual a la pantalla */
+  height: 100vh;   
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
+  align-items: center; 
 }
 
 .left-column img {
-  width: 150px;      /* Un poco más pequeña */
+  width: 150px;     
   height: 150px;
   border-radius: 50%;
-  border: 8px solid rgba(255, 255, 255, 0.2); /* Borde blanco semitransparente */
+  border: 8px solid rgba(255, 255, 255, 0.2); 
   object-fit: cover;
-  margin-bottom: 2rem; /* Espacio debajo de la imagen */
+  margin-bottom: 2rem; 
 }
 .left-column a.active {
     color: white;
-    background: rgba(255, 255, 255, 0.2); /* Un poco más visible */
+    background: rgba(255, 255, 255, 0.2);
 }
 
 
@@ -157,30 +157,30 @@ h2{
 }
 
 .experience-item {
-    margin-bottom: 2rem;  /* espacio entre experiencias */
+    margin-bottom: 2rem;  
 }
 
 .experience-header {
     display: flex;
-    justify-content: space-between;  /* rol a la izquierda, meta a la derecha */
-    align-items: baseline;  /* alinea las líneas base del texto */
-    flex-wrap: wrap;        /* por si en pantallas pequeña se apilan */
-    gap: 1rem;              /* espacio mínimo entre los dos */
+    justify-content: space-between;  
+    align-items: baseline; 
+    flex-wrap: wrap;        
+    gap: 1rem;              
 }
 
 .experience-header h3 {
-    margin: 0;              /* quita margen por defecto */
+    margin: 0;            
     font-size: 1.3rem;
     font-weight: 600;
 }
 
 .experience-meta {
     font-size: 1rem;
-    color: #666;            /* color más suave para la fecha/ubicación */
-    white-space: nowrap;    /* evita que el texto se parta en varias líneas */
+    color: #666;           
+    white-space: nowrap;   
 }
 
-/* En móviles, si no cabe, se apilan */
+
 @media (max-width: 600px) {
     .experience-header {
         flex-direction: column;
@@ -204,10 +204,10 @@ h2{
 
 .education-foot {
     display: flex;
-    justify-content: space-between;  /* rol a la izquierda, meta a la derecha */
-    align-items: baseline;  /* alinea las líneas base del texto */
-    flex-wrap: wrap;        /* por si en pantallas pequeña se apilan */
-    gap: 1rem;              /* espacio mínimo entre los dos */
+    justify-content: space-between;  
+    align-items: baseline; 
+    flex-wrap: wrap;        
+    gap: 1rem;            
 }
 
 .year {
@@ -246,4 +246,5 @@ h2{
 video {
   max-width: 100%;
   height: auto;
+
 }
