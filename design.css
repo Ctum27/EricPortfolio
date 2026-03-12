@@ -1,0 +1,249 @@
+/*Columnas*/
+
+.columns {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* Izquierda fija 280px, derecha el resto */
+  gap: 50px; 
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh; /* Altura mínima de toda la pantalla */
+}
+/* COLUMNA IZQUIERDA */
+
+.left-column ul {
+  list-style: none;  /* Quita las viñetas */
+  padding: 0;         /* Quita el padding por defecto */
+  margin: 0;          /* Quita el margen por defecto */
+  width: 100%;        /* Ocupa todo el ancho disponible */
+}
+
+.left-column li {
+  margin: 0;          /* Quita márgenes individuales */
+}
+
+.left-column a {
+  display: block;     /* Hace que el enlace ocupe todo el ancho del <li> */
+  padding: 0.5rem 2rem; /* Espaciado interno: vertical 0.5rem, horizontal 2rem */
+  color: rgba(255, 252, 252, 0.801); /* Texto blanco con 60% de opacidad */
+  text-decoration: none; /* Quita el subrayado */
+  font-weight: 600;   /* Un poco de negrita */
+  text-transform: uppercase; 
+  font-size: 1rem;  /* Tamaño de letra más pequeño */
+  letter-spacing: 8px; /* Espaciado entre letras */
+  transition: all 0.3s ease; /* Suaviza los cambios de color */
+}
+
+.left-column a:hover {
+  color: white; /* Al pasar el mouse, texto completamente blanco */
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+}
+
+.left-column {
+  background-color: black; /* El fondo de la coulmna*/
+  color: white;
+  padding: 5rem 0;  /* Espaciado superior e inferior */
+  position: sticky; /* Se queda fija al hacer scroll */
+  top: 0;
+  height: 100vh;    /* Altura igual a la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+}
+
+.left-column img {
+  width: 150px;      /* Un poco más pequeña */
+  height: 150px;
+  border-radius: 50%;
+  border: 8px solid rgba(255, 255, 255, 0.2); /* Borde blanco semitransparente */
+  object-fit: cover;
+  margin-bottom: 2rem; /* Espacio debajo de la imagen */
+}
+.left-column a.active {
+    color: white;
+    background: rgba(255, 255, 255, 0.2); /* Un poco más visible */
+}
+
+
+
+/* COLUMNA DERECHA */
+.right-column article {
+  margin-bottom: 30px;
+}
+
+img{ width: 200px;
+    border-radius: 50%;
+    aspect-ratio: 1; /* Se ajusta al mismo valor que el width */
+    object-fit: cover;
+  }
+
+  
+
+/* Ocultar Columnas */
+
+.section-hidden {
+    display: none;
+}
+
+/* Color de fondo */
+body {
+  background-color: blanchedalmond;
+}
+
+/* Para las letras */
+h1{ font-family: "Bitcount Prop Double", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 500px;
+  }
+
+h2{
+  font-family: "Bitcount Prop Double", system-ui;
+  font-family: "Quantico", sans-serif;
+  font-weight: 100px;
+  font-style: normal;
+ font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+/*About  page*/ 
+
+#About h1:first-of-type {
+    font-size: 3rem;    
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;  
+     line-height: 0.5;
+}
+
+#About h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #555; 
+    line-height: 0.5;
+}
+
+#About p {
+    font-size: 1.2rem;
+    line-height: 1.5;  
+    margin-bottom: 1.5rem;
+}
+
+
+#About h1:last-of-type {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#About p strong {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    line-height: 0;
+}
+
+/*Experience page*/ 
+
+#Experience h1 {
+  font-size: 3rem;    
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;  
+     line-height: 0.5;
+}
+
+.experience-item {
+    margin-bottom: 2rem;  /* espacio entre experiencias */
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;  /* rol a la izquierda, meta a la derecha */
+    align-items: baseline;  /* alinea las líneas base del texto */
+    flex-wrap: wrap;        /* por si en pantallas pequeña se apilan */
+    gap: 1rem;              /* espacio mínimo entre los dos */
+}
+
+.experience-header h3 {
+    margin: 0;              /* quita margen por defecto */
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.experience-meta {
+    font-size: 1rem;
+    color: #666;            /* color más suave para la fecha/ubicación */
+    white-space: nowrap;    /* evita que el texto se parta en varias líneas */
+}
+
+/* En móviles, si no cabe, se apilan */
+@media (max-width: 600px) {
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .experience-meta {
+        white-space: normal;
+    }
+}
+
+/* Education page */ 
+
+#Education h1 {              /* Esta es para el titulo */
+  font-size: 3rem;    
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;  
+     line-height: 0.5;
+}
+
+.education-foot {
+    display: flex;
+    justify-content: space-between;  /* rol a la izquierda, meta a la derecha */
+    align-items: baseline;  /* alinea las líneas base del texto */
+    flex-wrap: wrap;        /* por si en pantallas pequeña se apilan */
+    gap: 1rem;              /* espacio mínimo entre los dos */
+}
+
+.year {
+  font-size: 1rem;
+    color: #666;            
+    white-space: nowrap;
+}
+
+
+/* MORE */
+
+.social-icon i {
+    font-size: 3rem; 
+    display: flex;
+    gap: 100px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #d6d4d0;
+    color: #2c3e50;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
